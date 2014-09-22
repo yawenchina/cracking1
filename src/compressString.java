@@ -35,6 +35,12 @@ public class compressString {
 				temp = input.charAt(i);
 				count = 1;
 			}
+			
+		}
+		if(count < 9){
+			length+=2;
+		}else{
+			length+=3;
 		}
 		return length;
 	}
@@ -53,6 +59,8 @@ public class compressString {
 				count = 1;
 			}
 		}
+		m.append(temp);
+		m.append(count);
 		return m.toString();
 	}
 }
